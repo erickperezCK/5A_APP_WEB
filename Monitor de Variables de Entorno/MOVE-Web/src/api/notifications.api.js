@@ -1,0 +1,36 @@
+import api from "./base.api";
+
+const endpoint = "/notifications";
+
+// Obtener todas las notificaciones NO archivadas
+export const getUnfiledNotifications = async ({deviceId, sensor}) => {
+    return await api.get(`${endpoint}/unfiled`, {
+        params: { deviceId, sensor }
+    });
+};
+
+// Obtener todas las notificaciones archivadas
+export const getFiledNotifications = async () => {
+    return await api.get(`${endpoint}/filed`);
+};
+
+// Obtener una notificación por ID
+export const getNotification = async (notificationId) => {
+    return await api.get(`${endpoint}/${notificationId}`);
+};
+
+// Obtener una notificación archivada por ID
+export const getFiledNotification = async (notificationId) => {
+    return await api.get(`${endpoint}/filed/${notificationId}`);
+};
+
+// Crear una nueva notificación
+export const createNotification = async (notification) => {
+    return await api.post(endpoint, notification);
+};
+
+// Archivar una notificación (cambiar su estado a false)
+export const fileNotification = async (notificationId) => {
+    return await api.put(`${endpoint}/filed/${notificationId}`);
+};
+

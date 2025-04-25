@@ -1,0 +1,20 @@
+### POST Login contraseña correcta
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "user": "ander@gmail.com",
+  "password": "1234567890"
+}
+
+### POST Login contraseña incorrecta
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "user": "Elegidokawai",
+  "password": "queso"
+}
+
+### POST Cerrar sesión
+POST http://localhost:3000/api/auth/logout

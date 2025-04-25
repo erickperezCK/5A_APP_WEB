@@ -1,0 +1,30 @@
+### Obtener todas las notificaciones NO archivadas
+GET http://localhost:3000/api/notifications/unfiled
+
+### Obtener una notificación por ID
+GET http://localhost:3000/api/notifications/67c3bb18836aea9d621e6d9e
+
+### Obtener todas las notificaciones archivadas
+GET http://localhost:3000/api/notifications/filed
+
+### Obtener una notificación archivada por ID
+GET http://localhost:3000/api/notifications/filed/67c3bb18836aea9d621e6d9e
+
+### Crear una notificación
+POST http://localhost:3000/api/notifications
+Content-Type: application/json
+
+{
+  "name": "Alerta de fuego",
+  "sensor": "CO2",
+  "device": "65fd9b2e4f1a2c001c1a8e2a",
+  "image": "https://imagnAleta.png"
+}
+
+### Archivar una notificación
+PUT http://localhost:3000/api/notifications/filed/67c3bb18836aea9d621e6d9e
+Content-Type: application/json
+
+{
+    "status": false
+}
