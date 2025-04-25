@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Yaldevi;
+    src: url(./assets/fonts/Yaldevi/Yaldevi-VariableFont_wght.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer {
+    body {
+        font-family: var(--font-yaldevi);
+    }
+}
+
+@theme {
+    --font-yaldevi: "Yaldevi", "Montserrat", "Inter", sans-serif;
+}
